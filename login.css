@@ -1,0 +1,277 @@
+/* Reset */
+* {
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html, body {
+  min-height: 100vh;
+height: auto;
+  height: 100%;
+  background: url('shared-bg1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+}
+.container {
+  position: absolute;
+  top: 40px; /* height of description */
+  bottom: 40px; /* approximate footer height */
+  left: 0;
+  right: 0;
+  height: auto;
+  overflow: hidden;
+}
+/*.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}*/
+
+/* Branding top-right on page1 */
+.branding {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  color: #000033; /* Darker than 'midnightblue' */
+  font-size: 16px;
+  font-weight: 900; /* Makes text bold */
+  z-index: 30;
+}
+
+.logo {
+  height: 80px;
+}
+
+.institution h2,
+.institution h3 {
+  font-weight: normal;
+  font-size: 24px;
+}
+
+/* PAGE 1 - Initial full page */
+.page1 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s ease;
+  z-index: 20;
+  padding-left: 40px;
+  box-sizing: border-box;
+}
+
+/* Page1 heading */
+.page1 .heading {
+  font-size: 70px;
+  font-weight: 900;
+  color: midnightblue;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+  white-space: nowrap;
+  margin-bottom: 40px;
+  user-select: none;
+}
+
+/* Login button */
+#login-btn {
+  padding: 20px 50px;
+  border: none;
+  border-radius: 30px;
+  background-color: midnightblue;
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 40;
+  transition: background-color 0.3s ease;
+}
+
+#login-btn:hover {
+  background-color: blue;
+}
+
+/* PAGE 2 - Login Screen */
+.page2 {
+  position: absolute;
+  top: 0; right: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 1s ease, opacity 1s ease;
+  transform: translateX(100%);
+  z-index: 10;
+}
+
+/* Show page2 */
+.page2.active {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Left half of page2 with heading */
+.left-half {
+  width: 50%;
+  padding-left: 40px;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+/* Heading in left half */
+.heading-left {
+  font-size: 80px;
+  line-height: 1.2;
+  font-weight: 900;
+  color: midnightblue;
+  user-select: none;
+  white-space: normal;
+  width: 100%;
+  max-width: 90%;
+}
+
+/* Right half of page2 with login form */
+.right-half {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 40px;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+/* Form styling */
+form {
+  width: 85%;  /* increase from 70% */
+  max-width: 450px; /* increase from 400px */
+  /* rest unchanged */
+  background: rgba(255, 255, 255, 0.1);
+  padding: 40px 30px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form logo */
+.form-logo {
+  height: 180px;
+  margin: 0 auto 30px auto;
+  display: block;
+}
+
+/* Form heading */
+.form-heading {
+  text-align: center;
+  font-size: 34px;
+  font-weight: 700;
+  color: midnightblue;
+  margin-bottom: 30px;
+}
+
+/* Form labels */
+label {
+  color: darkblue;
+  margin-bottom: 8px;
+  font-size: 22px;
+  text-align: left;
+}
+
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid blue;
+  font-size: 20px;
+  padding: 10px 5px;
+  color: black;
+  margin-bottom: 25px;
+  outline: none;
+}
+
+/* Password wrapper */
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.password-wrapper input {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid blue;
+  font-size: 20px;
+  padding: 10px 5px;
+  color: black;
+  outline: none;
+}
+
+/* Toggle password button */
+#toggle-password {
+  background: none;
+  border: none;
+  color:blue;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0 10px;
+  user-select: none;
+}
+
+/* Submit button */
+form button[type="submit"] {
+  padding: 15px;
+  background-color: midnightblue;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: blue;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: midnightblue;
+  color: #FFFFFF;
+  font-size: 0.9em;
+  line-height: 40px;
+  text-align: center;
+  z-index: 1000;
+}
+/* Fix description at top */
+.page-description {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 40px;
+  background: midnightblue;
+  color: #FFFFFF;
+  font-size: 0.9em;
+  line-height: 40px;
+  text-align: center;
+  z-index: 1000;
+}

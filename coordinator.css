@@ -1,0 +1,292 @@
+/* Page background */
+body {
+  margin: 0;
+  padding: 0.5cm;
+  background: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Main container */
+.main-wrapper {
+  width: 95%;
+  max-width: 1400px;
+  margin: 2px auto;
+  border: 2px solid #2e7d32; /* dark green */
+  border-radius: 8px;
+  padding: 30px;
+  position: relative;
+  min-height: 95vh;
+  background: white;
+}
+
+/* Header */
+.header {
+  background-color: #388e3c; /* green shade */
+  color: white;
+  padding: 8px 20px;
+  height :auto;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 24px;
+}
+
+#notif-btn {
+  font-size: 24px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+#notif-btn:hover {
+  color: #a5d6a7; /* lighter green */
+}
+
+/* Tabs */
+.tabs {
+    margin-top: 8px; 
+  display: flex;
+  justify-content: center;
+  border-bottom: 3px solid #4caf50;
+  padding: 0 25px;
+  gap: 15px;
+}
+
+.tab-btn {
+  background-color: #66bb6a;
+  border: none;
+  padding: 12px 30px;
+  cursor: pointer;
+  border-radius: 8px 8px 0 0;
+  color: white;
+  font-weight: 600;
+  font-size: 17px;
+  transition: background-color 0.3s ease;
+}
+
+.tab-btn:hover {
+  background-color: #81c784;
+}
+
+.tab-btn.active {
+  background-color: #2e7d32;
+  border-bottom: 3px solid white;
+  cursor: default;
+}
+
+/* Prompt section */
+#prompt-section {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#check-request-btn {
+  background-color: #43a047;
+  color: white;
+  font-size: 22px;
+  font-weight: 700;
+  border: none;
+  padding: 14px 48px;
+  border-radius: 50px;
+  cursor: pointer;
+  filter: drop-shadow(0 0 10px #388e3c);
+  margin-bottom: 18px;
+  transition: background-color 0.3s ease, filter 0.3s ease;
+}
+
+#check-request-btn:hover {
+  background-color: #2e7d32;
+  filter: drop-shadow(0 0 14px #2e7d32);
+}
+
+.blinker {
+  color: #2e7d32;
+  font-weight: 700;
+  font-size: 36px;
+  animation: blinker 1.2s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Tab content area */
+#tab-content {
+  padding: 20px 25px 60px 25px;
+  min-height: 300px;
+  background: #e8f5e9; /* very light green background */
+  border-radius: 0 0 12px 12px;
+  font-size: 16px;
+  color: #2e7d32;
+}
+
+/* Notification panel */
+.notif-panel {
+  position: fixed;
+  top: 80px;
+  right: 0;
+  width: 320px;
+  height: calc(100vh - 90px);
+  background-color: #a5d6a7; /* light green */
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  z-index: 9999;
+  border-radius: 12px 0 0 12px;
+}
+
+.notif-panel.visible {
+  transform: translateX(0);
+}
+
+.notif-panel h3 {
+  margin-top: 0;
+  color: #1b5e20;
+}
+
+#notif-list {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+#notif-list li {
+  background: #66bb6a;
+  color: white;
+  padding: 10px 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+#notif-list li.unread {
+  font-weight: 700;
+  background-color: #388e3c;
+}
+
+#notif-list li:hover {
+  background-color: #2e7d32;
+}
+
+#notif-close-btn {
+  background: #2e7d32;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  width: 100%;
+  font-weight: 700;
+  margin-top: 10px;
+}
+/* Approve button */
+.approve-btn {
+  background-color: #4caf50; /* green */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 14px;
+  box-shadow: 0 4px 8px rgba(76, 175, 80, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.approve-btn:hover {
+  background-color: #388e3c;
+  box-shadow: 0 6px 12px rgba(56, 142, 60, 0.6);
+}
+
+/* Reject button */
+.reject-btn {
+  background-color: #f44336; /* red */
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(244, 67, 54, 0.4);
+  font-size: 14px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reject-btn:hover {
+  background-color: #c62828;
+  box-shadow: 0 6px 12px rgba(198, 40, 40, 0.6);
+}
+
+
+/* Logout button fixed bottom right */
+#logout-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #2e7d32;
+  color: white;
+  padding: 14px 25px;
+  font-weight: 700;
+  font-size: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(46, 125, 50, 0.7);
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  z-index: 1000;
+}
+
+#logout-btn:hover {
+  background-color: #1b5e20;
+  box-shadow: 0 6px 16px rgba(27, 94, 32, 0.9);
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px 12px;
+  border: 1px solid #81c784;
+  text-align: left;
+}
+
+th {
+  background-color: #388e3c;
+  color: white;
+}
+
+.status-approved {
+  color: green;
+  font-weight: 700;
+}
+
+.status-rejected {
+  color: red;
+  font-weight: 700;
+}
+
+.status-pending {
+  color: #2e7d32;
+  font-weight: 700;
+}
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #B2BEB5;
+  padding: 10px;
+}
