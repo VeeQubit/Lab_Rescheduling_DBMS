@@ -15,7 +15,7 @@ This system allows:
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** PHP
@@ -25,7 +25,7 @@ This system allows:
 
 ---
 
-## 🔧 Features
+##  Features
 
 - 🧑‍🎓 Student Dashboard: Request form, status tracking, notifications
 - 🧑‍🏫 Instructor Dashboard: Request handling, automated updates
