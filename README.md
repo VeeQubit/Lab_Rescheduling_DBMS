@@ -27,12 +27,12 @@ This system allows:
 
 ##  Features
 
-- 🧑‍🎓 Student Dashboard: Request form, status tracking, notifications
-- 🧑‍🏫 Instructor Dashboard: Request handling, automated updates
-- 👨‍💼 Coordinator Dashboard: Lab assignment management, oversight of requests
-- 🔒 Secure login system with role validation
-- 📩 stored notification system on dashboard
-- ✨ Smooth UI transitions and typing animations
+-  Student Dashboard: Request form, status tracking, notifications
+-  Instructor Dashboard: Request handling, automated updates
+-  Coordinator Dashboard: Lab assignment management, oversight of requests
+-  Secure login system with role validation
+-  stored notification system on dashboard
+-  Smooth UI transitions and typing animations
 
 ---
 
